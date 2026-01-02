@@ -65,7 +65,7 @@ A task is “Done” when:
 - [x] Create repos (frontend/backend/contracts optional)
 - [x] Add README skeletons + local dev instructions
 - [x] Add formatting + linting + type checks (pre-commit optional)
-- [ ] Add GitHub Actions CI for lint/test on PR
+- [x] Add GitHub Actions CI for lint/test on PR
 - [ ] Choose hosting:
   - [ ] Frontend deploy (Vercel)
   - [ ] Backend deploy (Render/Fly/Hetzner/etc.)
