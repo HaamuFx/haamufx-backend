@@ -66,13 +66,22 @@ A task is “Done” when:
 - [x] Add README skeletons + local dev instructions
 - [x] Add formatting + linting + type checks (pre-commit optional)
 - [x] Add GitHub Actions CI for lint/test on PR
-- [ ] Choose hosting:
-  - [ ] Frontend deploy (Vercel)
-  - [ ] Backend deploy (Render/Fly/Hetzner/etc.)
-  - [ ] Postgres provisioned
-- [ ] Secrets management:
-  - [ ] `.env.example` files
-  - [ ] Deploy environment vars configured
+- [ ] ~~Choose hosting:~~
+  - [ ] ~~Frontend deploy (Vercel)~~
+  - [ ] ~~Backend deploy (Render/Fly/Hetzner/etc.)~~
+  - [ ] ~~Postgres provisioned~~
+- [ ] Local-first milestone before hosting:
+  - [ ] Have at least one FastAPI endpoint worth demoing (`/health` or `/positions/{address}`)
+  - [ ] Have at least one UI page worth showing (simple dashboard stub is fine)
+  - [ ] Document local run commands: `uv run uvicorn app.main:get_app --reload`, `docker compose up db`, `npm run dev` (once frontend exists)
+- [ ] Local dev environment hardening:
+  - [ ] Add `docker-compose.yml` with Postgres service for local use
+  - [ ] Add `.env.example` with `DATABASE_URL=postgresql://...` (and other required vars)
+  - [ ] Note VS Code helpers: Python + Pylance + Ruff, Docker, Thunder Client/REST Client, SQLTools (or external DB client)
+- [ ] Concrete secrets management:
+  - [ ] Keep `.env.example` up to date with all required variables (local + future deploy)
+  - [ ] Document how to load secrets locally (e.g., `cp .env.example .env`) and note that CI should NOT require secrets yet
+  - [ ] Add a reminder checklist for future hosting: where each env var will live (Vercel/Render/etc.) once accounts exist
 
 ### Skeleton apps
 
