@@ -1,0 +1,30 @@
+# Python caches
+__pycache__/
+*.py[cod]
+*.pyo
+*.orig
+
+# Virtual environments
+.venv/
+.env
+.env.*
+
+# Tooling caches
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+.hypothesis/
+
+# Editors / OS artifacts
+*.swp
+*.swo
+*.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Local data / secrets
+*.log
+*.sqlite3
+*.db
+cache/

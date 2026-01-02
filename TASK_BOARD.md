@@ -1,6 +1,6 @@
 # HaamuFx Task Board
 
-_HaamuFx — Health Factor forecasting + alerts for Aave v3 on zkSync_
+_HaamuFx : Health Factor forecasting + alerts for Aave v3 on zkSync_
 
 ## Goal (North Star MVP)
 
@@ -62,9 +62,9 @@ A task is “Done” when:
 
 ### Infra / Repo setup
 
-- [ ] Create repos (frontend/backend/contracts optional)
-- [ ] Add README skeletons + local dev instructions
-- [ ] Add formatting + linting + type checks (pre-commit optional)
+- [x] Create repos (frontend/backend/contracts optional)
+- [x] Add README skeletons + local dev instructions
+- [x] Add formatting + linting + type checks (pre-commit optional)
 - [ ] Add GitHub Actions CI for lint/test on PR
 - [ ] Choose hosting:
   - [ ] Frontend deploy (Vercel)

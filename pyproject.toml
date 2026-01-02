@@ -1,0 +1,59 @@
+[project]
+name = "haamufx-backend"
+version = "0.1.0"
+description = "FastAPI backend for HaamuFx risk forecasting dApp"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi>=0.111.0",
+    "uvicorn[standard]>=0.30.0"
+]
+
+[project.optional-dependencies]
+dev = [
+    "ruff>=0.6.0",
+    "mypy>=1.11.1",
+    "pre-commit>=3.8.0",
+]
+
+[build-system]
+requires = ["hatchling>=1.25.0"]
+build-backend = "hatchling.build"
+
+[tool.uv]
+package = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["app"]
+
+[tool.hatch.build.targets.sdist]
+include = [
+    "app",
+    "pyproject.toml",
+    "README.md",
+    "CONTRIBUTING.md",
+    "TASK_BOARD.md",
+]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+src = ["app", "tests"]
+
+[tool.ruff.lint]
+select = [
+    "E",  # pycodestyle errors
+    "F",  # pyflakes
+    "I",  # import sorting
+    "B",  # flake8-bugbear
+]
+ignore = []
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["S101"]
+
+[tool.mypy]
+python_version = "3.11"
+strict = false
+ignore_missing_imports = true
+files = ["app"]

@@ -12,9 +12,18 @@ This project is currently a solo / small-team MVP. The guidelines below keep cha
 
 - Python backend uses FastAPI.
 - Prefer type hints everywhere; keep functions small and focused.
-- Follow the configured formatter/linter (to be finalized in P0):
-  - Formatter: e.g. `black` or `ruff format`.
-  - Linter: e.g. `ruff`.
+- Formatting + linting are enforced via `ruff format` / `ruff check` (no Black in this repo).
+
+## Tooling & checks
+
+- Dependency management uses [uv](https://github.com/astral-sh/uv). Install tooling with `uv sync --extra dev`.
+- Common commands:
+  - `uv run ruff format app tests`
+  - `uv run ruff check app tests`
+  - `uv run mypy app`
+- Pre-commit hooks are configured in `.pre-commit-config.yaml`:
+  - Install once via `uv run pre-commit install`.
+  - Optional manual run: `uv run pre-commit run --all-files`.
 
 ## Tests
 
